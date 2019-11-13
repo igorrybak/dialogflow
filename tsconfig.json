@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "strict": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "declaration": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "pretty": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["es2017"],
+        "sourceMap": true,
+        "outDir": "./dist",
+        "baseUrl": "src",
+        "rootDirs": ["src"],
+        "paths": {
+            "@/*": ["./*"]
+        },
+        "typeRoots": ["node_modules/@types", "src/types"]
+    },
+    "include": ["src/**/*.ts", "src/main.ts"],
+    "exclude": ["node_modules", "dist"]
+}
