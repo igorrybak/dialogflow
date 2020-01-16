@@ -1,33 +1,34 @@
 {
-    "name": "dialogflow",
+    "name": "dialogflow-template",
     "version": "1.0.0",
     "description": "",
-    "main": "main.js",
+    "main": "dist/main.js",
     "scripts": {
         "start": "node dist/main.js",
         "debug": "ts-node-dev --respawn src/main.ts",
-        "build": "rm -rf dist; tsc && echo \"$(tput setaf 2)Compilation successful$(tput sgr0)\"",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "rm -rf dist; tsc && echo \"$(tput setaf 2)Compilation successful$(tput sgr0)\""
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/zathershtein/dialogflow.git"
     },
-    "author": "",
+    "author": "zathershtein",
+    "keywords": [],
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/zathershtein/dialogflow/issues"
     },
     "homepage": "https://github.com/zathershtein/dialogflow#readme",
-    "devDependencies": {
-        "@types/dotenv": "^8.2.0",
-        "@types/node": "^12.12.7",
-        "@types/uuid": "^3.4.6",
-        "ts-node-dev": "^1.0.0-pre.44",
-        "typescript": "^3.7.2"
-    },
     "dependencies": {
+        "dialogflow": "^1.1.1",
         "dotenv": "^8.2.0",
         "uuid": "^3.3.3"
+    },
+    "devDependencies": {
+        "@types/dotenv": "^8.2.0",
+        "@types/node": "^13.1.7",
+        "@types/uuid": "^3.4.6",
+        "ts-node-dev": "^1.0.0-pre.44",
+        "typescript": "^3.7.4"
     }
 }
