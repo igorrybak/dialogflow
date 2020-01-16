@@ -10,7 +10,7 @@ const languageCode = "en";
 const queries = [
     "Reserve a meeting room in Toronto office, there will be 5 of us",
     "Next monday at 3pm for 1 hour, please",
-    "B",
+    "It's B",
 ];
 
 const sessionClient = new dialogflow.SessionsClient();
@@ -53,9 +53,12 @@ const executeQueries = async (projectId: string, sessionId: string, queries: str
     let intentResponse;
     for (const query of queries) {
         try {
+            console.log("*****************************************");
             console.log(`Sending Query: ${query}`);
             intentResponse = await detectIntent(projectId, sessionId, query, languageCode, context);
-            console.log("Detected intent");
+            console.log("Detected intent with name: ", intentResponse.queryResult.intent.displayName);
+            console.log("Action: ", intentResponse.queryResult.action);
+            console.log("Params: ", intentResponse.queryResult.parameters);
             console.log(`Fulfillment Text: ${intentResponse.queryResult.fulfillmentText}`);
             // Use the context from this response for next queries
             context = intentResponse.queryResult.outputContexts;
